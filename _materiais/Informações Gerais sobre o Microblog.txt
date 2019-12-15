@@ -1,0 +1,40 @@
+﻿Sobre o Microblog
+
+--Área Pública (localhost/microblog)
+index.php               --página inicial
+post-detalhe.php        --visualizar detalhes de um post
+search.php              --resultados de uma busca
+login.php               --login na área administrativa
+
+
+--Área Administrativa (localhost/microblog/admin)
+
+-Nível ADMIN:
+index.php               --página inicial
+meu-perfil.php          --visualizar/atualizar próprios dados
+
+posts.php               --visualizar todos os posts de todos os usuários
+post-insere.php         --criar posts para o usuário logado  
+post-atualiza.php       --visualizar/atualizar posts de qualquer usuário
+post-exclui.php         --excluir posts de qualquer usuário
+
+usuario.php             --visualizar todos os usuários
+usuario-insere.php      --criar usuários
+usuario-atualiza.php    --visualizar/atualizar dados de qualquer usuário
+usuario-exclui.php      --excluir qualquer usuário
+
+
+-Nível EDITOR:
+index.php               --página inicial
+meu-perfil.php          --visualizar/atualizar próprios dados
+
+posts.php               --visualizar todos os posts do usuário logado
+post-insere.php         --criar posts para o usuário logado  
+post-atualiza.php       --visualizar/atualizar posts do usuário logado
+post-exclui.php         --excluir posts do usuário logado
+
+nao-autorizado          --página de erro ao tentar acessar algum 
+			             recurso sem permissão       
+
+
+

@@ -1,0 +1,220 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Ubuntu');
+
+*, *::before, *::after {
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
+}
+
+html { font-size: 18px;}
+
+/* Reset em alguns elementos */
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    background-image: url(../imagens/textura.png);
+    background-attachment: fixed;
+    margin:0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #0074d9;
+}
+a:hover, a:focus { color: #111; }
+
+
+
+#topo, #rodape {
+    border: 1px solid navy;
+    background-color: white;
+    border-left: none;
+    border-right: none;
+}
+
+#topo { border-top: none; }
+
+#rodape {
+    border-bottom: none;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+h1 { text-align: center; }
+h1 a { 
+    color: navy;
+    font-family: Raleway, 'Open Sans', Arial, sans-serif;
+}
+
+
+
+/* Regras para o Menu */
+nav { 
+    display: flex;
+    min-height: 40px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+
+}
+
+nav a, nav a:visited {
+    color: navy;
+    display: flex;
+    min-height: inherit;
+    align-items: center;
+    width: 50%;
+    justify-content: center;
+    text-align: center;
+}
+nav a:hover, nav a:focus {
+    background-color: navy;
+    color: white;
+}
+
+/* Regras para posicionar o rodapé sempre na parte inferior da tela (Sticky Footer)
+Fonte: https://css-tricks.com/couple-takes-sticky-footer/ */
+html, body { height: 100%; }
+#container {
+    min-height: 100%;
+    margin-bottom: -60px; /* alterar conforme seu rodapé */
+}
+#container::after {
+    content: "";
+    display: block;
+}
+#rodape, #container::after {
+    height: 60px; /* alterar conforme seu rodapé */
+}
+
+img { max-width: 100%; }
+
+
+.grupo-de-posts {
+    margin: auto;
+    width: 95%;
+}
+
+.post, .conteudo {
+    margin: 10px auto;
+    background-color: white;
+    padding: 5px;
+    box-shadow: grey 1px 1px 5px;
+}
+
+.post-resultado { margin: 20px auto; } 
+
+main h2, main h3, main p, main time {
+    padding: 5px 0;
+}
+
+main h2 { 
+    color: #0074d9; 
+    font-size: 1.4rem;
+}
+
+time { color: gray; }
+
+
+/* Formulários de busca e login */
+#form-login, #form-busca {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 320px;
+}
+
+#form-busca { 
+    text-align: center;
+    margin-top: 5px; 
+}
+
+#form-busca input, #form-login input {
+    border: solid 1px navy;
+    padding: 5px;
+}
+
+label { 
+    font-weight: bold; 
+    font-size: 15px;
+    line-height: 2;
+}
+
+input { 
+    height: 35px; 
+    width: 100%; 
+}
+
+form button { 
+    border: none;
+    padding: 5px;
+    background-color: black;
+    color: white;
+}
+form button:hover, form button:focus {
+    background-color: navy;
+    color: white;
+}
+
+
+/* Feedbacks */
+.mensagem {
+    font-style: italic;
+    text-align: center;
+    color: maroon;
+}
+
+
+.foto { /* Usada na imagem em post-detalhe.php */
+    float: left;
+    margin-right: 5px;
+    max-width: 100%;   
+}
+
+.autor {
+    color: darkslategrey;
+    font-size: 14px;
+}
+
+/* Media Queries */
+@media screen and (min-width: 585px){
+    .grupo-de-posts {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .grupo-de-posts .post {
+        width: 49%;
+    }
+}
+
+
+@media screen and (min-width: 680px){
+    #topo { min-height: 70px; }
+    #topo div {
+        min-height: inherit;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    h1 { 
+        text-align: left; 
+        width: 25%;
+    }
+    nav, #form-busca { margin-top: 0; }
+    nav { width: 35%; }
+    #form-busca { width: 40%; }
+}
+
+
+@media screen and (min-width: 1000px){
+    #topo div, main {
+        width: 1000px;
+        margin: auto;
+    }
+}

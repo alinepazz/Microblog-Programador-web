@@ -1,0 +1,71 @@
+/* Regras para as páginas do Painel de Controle (Admin) */
+body { 
+    background: gray; 
+    margin:0;
+    padding: 0;
+}
+#topo, #rodape {
+    border-color: black;
+    background-color: #ddd;
+}
+
+.breadcrumb {
+    font-size: 0.9rem;
+    color: gray;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: lightgray;
+}
+
+/* Formulários Admin */
+#form-inserir, #form-atualizar {
+    margin: 20px auto;
+    max-width: 700px;
+}
+input:not([type=file]), textarea, select {
+    border: none;
+    box-shadow: grey 0 0 5px inset;
+    padding: 5px;
+    width: 100%;
+}
+input { height: 35px; }
+
+
+/* Tabelas */
+table {
+    margin: 20px auto;
+    max-width: 100%;
+    border-collapse: collapse;
+}
+tr, th, td { 
+    border: solid 1px lightslategrey; 
+    padding: 10px;
+}
+thead th { 
+    background-color: lightslategrey; 
+    color: white;
+}
+tr:nth-child(even){ background-color: whitesmoke; }
+
+
+/* Classes para formatar os links de inserir, alterar e excluir */
+.inserir, .atualizar, .excluir { 
+    color: white; 
+    padding: 5px;
+}
+.inserir { background-color: dodgerblue; } /* tom de azul */
+.atualizar { background-color: orange; } /* tom de laranja */
+.excluir { background-color: red; } /* tom de vermelho */
+
+
+/* Redefinindo regras e valores para telas a partir de 680px
+(somente válidas na área administrativa (painel de controle) */
+@media screen and (min-width: 680px){
+    #topo { min-height: 50px; }
+    #topo div {  display: flex; }
+    h1 { width: 50%;  }
+    nav { width: 40%;  justify-content: flex-end; }
+}

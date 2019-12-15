@@ -1,0 +1,14 @@
+﻿/* Mensagens de feedback */
+if( isset($_GET['acesso_proibido']) ){
+    $feedback = "Você deve logar primeiro!";
+} elseif( isset($_GET['logout']) ) {
+    $feedback = "Você saiu do sistema!";
+} elseif( isset($_GET['nao_encontrado']) ) {
+    $feedback = "Usuário não encontrado!";
+} elseif( isset($_GET['senha_incorreta']) ) {
+    $feedback = "A senha está errada!";          
+} elseif( isset($_GET['campos_obrigatorios']) ) {
+    $feedback = "Você deve preencher todos os campos!";
+} else {
+    $feedback = "";
+}

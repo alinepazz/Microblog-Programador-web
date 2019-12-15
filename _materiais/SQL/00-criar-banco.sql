@@ -1,0 +1,1 @@
+CREATE DATABASE progwebt12_microblog_seunome CHARACTER SET "utf8";
